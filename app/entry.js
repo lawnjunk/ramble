@@ -29,7 +29,9 @@ angular.module('ramble', [ngRoute])
     controllerAs: 'signinCtrl'
   })
   .when('/new/post', {
-    template: require('./view/new-post/new-post.html')
+    template: require('./view/new-post/new-post.html'),
+    controller: 'NewPostController',
+    controllerAs: 'newpostCtrl'
   })
   .when('/post/:id', {
     template: require('./view/entry/entry.html'),
