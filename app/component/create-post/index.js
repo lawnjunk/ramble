@@ -19,7 +19,7 @@ function NewPostController($q, $log, $location, authService, rambleService) {
     $log.info('creating post', this.post);
     rambleService.createEntry(this.post)
     .then(entry => $log.info('entry created, what now?', entry))
-    .catch(err => $log.err('no entry created!', err));
+    .catch(err => $log.err('no entry created', err));
   };
   this.returnDash = function(){
     $log.debug('yahoo in returnDash function');
