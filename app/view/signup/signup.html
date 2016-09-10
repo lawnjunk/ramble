@@ -23,8 +23,8 @@
   </div>
   <form class="app-signup form-auth" name="signupForm" novalidate ng-submit="signupCtrl.signup()">
     <h3>SIGN UP</h3>
-    <span class="label label-danger" ng-show="submitted && signForm.email.$error.required">Required!</span>
-    <span class="label label-danger" ng-show="submitted && signForm.$error.email">Invalid email!</span>
+    <span class="label label-danger" ng-show="submitted && signupForm.email.$error.required">Required!</span>
+    <span class="label label-danger" ng-show="submitted && signupForm.$error.email">Invalid email!</span>
     <label for="email">EMAIL</label>
     <input placeholder="email" class="form-control" email="email" type="text" ng-model="signupCtrl.user.user">
     <br/>
