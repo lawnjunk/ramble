@@ -11,18 +11,17 @@ ramble.component('rambleLrgEntry', {
   controllerAs: 'LrgEntryCtrl'
 });
 
-ramble.controller('LrgEntryController', ['$q', '$log', '$location', '$routeParams', 'rambleService',  LrgEntryController]);
+ramble.controller('LrgEntryController', ['$q', '$location', '$routeParams', 'rambleService',  LrgEntryController]);
 
-function LrgEntryController($q, $log, $location, $routeParams, rambleService) {
+function LrgEntryController($q, $location, $routeParams, rambleService) {
   this.entry = null;
   this.params = $routeParams;
 
   this.getEntry = function() {
-    $log.info('the entry id', this.params.id);
     rambleService.getEntry(this.params.id)
     .then(entry => {
       this.entry = entry;
     })
-    .catch(err => $log.error(err));
+    .catch(err);
   };
 }

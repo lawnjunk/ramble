@@ -5,11 +5,9 @@ require('./_nav.scss');
 const angular = require('angular');
 const ramble = angular.module('ramble');
 
-
 ramble.component('rambleNavBar', {
   template: require('./nav.html'),
-  controller: function SignoutCtrl($log, $location, $window, authService) {
-    $log.debug('init SignoutCtrl');
+  controller: function SignoutCtrl($location, $window, authService) {
 
     this.logout = function(){
       authService.logout()

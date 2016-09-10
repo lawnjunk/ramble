@@ -26,7 +26,6 @@ function EntryListItemController(rambleService) {
   }
 
   this.deletePost = function() {
-    console.log('deleting!');
     rambleService.deleteEntry(this.entry._id)
     .then(data => this.showMe = false);
 

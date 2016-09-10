@@ -16,9 +16,8 @@ ramble.controller('NewPostController', ['$q', '$log', '$location', 'authService'
 function NewPostController($q, $log, $location, authService, rambleService) {
 
   this.createEntry = function() {
-    $log.info('creating post', this.post);
     rambleService.createEntry(this.post)
-    .then(entry => $log.info('entry created, what now?', entry))
-    .catch(err => $log.err('no entry created', err));
+    .then(entry)
+    .catch(err);
   };
 }

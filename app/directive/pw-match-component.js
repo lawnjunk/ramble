@@ -9,8 +9,6 @@ angular.module('ramble')
       scope.$watch(attrs['pwCheck'], function (errorMsg) {
         elem[0].setCustomValidity(errorMsg);
         console.log(errorMsg);
-
-        // should be refactored at some point
         ctrl.$setValidity('pwCheck', errorMsg ? false : true);
       });
     }

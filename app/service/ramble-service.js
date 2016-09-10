@@ -56,11 +56,9 @@ function rambleService($log, $q, $http, authService) {
       return $http.get(url, config);
     })
     .then(res => {
-      $log.info('success -- entries ', res.data);
       return $q.resolve(res.data);
     })
     .catch(err => {
-      $log.info('error -- entries ', err);
       return $q.reject(err);
     });
   };
@@ -78,11 +76,9 @@ function rambleService($log, $q, $http, authService) {
       return $http.post(url, entry, config);
     })
     .then(res => {
-      $log.info('success -- entries ', res.data);
       return $q.resolve(res.data);
     })
     .catch(err => {
-      $log.info('error -- entries ', err);
       return $q.reject(err);
     });
   };
