@@ -1,24 +1,42 @@
 @import "_theme.scss";
 
+
 .lrg-entry {
-  margin: 10px;
-  text-align: left;
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
 
   h1 {
     font-weight: 200;
     text-transform: capitalize;
     color: $app-purple;
     text-align: center;
+    margin: 15px;
   }
 
   p {
-    text-align: left;
+    text-align: justify;
     font-weight: 200;
     font-size: 1.25em;
+    margin: 15px;
   }
+}
 
-  .container {
-    margin: 0 auto;
-    width: 80%;
+.home-btn {
+  margin-right: 15px;
+  margin-left: 15px;
+  width: 30%;
+  padding: 5px;
+  color: $app-purple-light;
+
+  &:hover {
+
+    color: $app-green;
+    outline: 2px solid $app-green;
+    border: none;
+
+    i {
+      color: $app-green;
+    }
   }
 }

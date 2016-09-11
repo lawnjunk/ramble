@@ -1,0 +1,19 @@
+@import "_theme.scss";
+
+.load-btn {
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 30%;
+  padding: 5px;
+  color: $app-purple-light;
+
+  &:hover {
+    i {
+      color: $app-green;
+    }
+
+    color: $app-green;
+    outline: 2px solid $app-green;
+    border: none;
+  }
+}
