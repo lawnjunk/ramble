@@ -63,6 +63,7 @@ require('./component/create-post');
 require('./component/entry-list');
 require('./component/entry-list-item');
 require('./component/lrg-entry');
+require('./component/footer');
 
 // angular controllers
 require('./view/signup/signup-controller.js');
