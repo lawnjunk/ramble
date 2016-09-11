@@ -7,22 +7,23 @@ const ramble = angular.module('ramble');
 
 ramble.component('rambleCreatePost', {
   template: require('./create-post.html'),
-  controller: 'NewPostController',
-  controllerAs: 'newPostCtrl'
+  controller: 'CreatePostController',
+  controllerAs: 'createPostCtrl'
 });
 
-ramble.controller('NewPostController', ['$q', '$log', '$location', 'authService', 'rambleService', NewPostController]);
-
-function NewPostController($q, $log, $location, authService, rambleService) {
-
-  this.log = function() {
-    $log.info('logging something test');
-  };
+ramble.controller('CreatePostController', ['$q', '$log', '$location', 'rambleService', CreatePostController]);
+//removed 'authService' from function params and controller injecting
+function CreatePostController($q, $log, $location, rambleService) {
 
   this.createEntry = function() {
-    $log.info('creating post', this.post);
     rambleService.createEntry(this.post)
-    .then(entry => $log.info('entry created, what now?', entry))
+    .then(() => {
+      $location.path('/dashboard');
+    })
     .catch(err => $log.err('no entry created', err));
+  };
+
+  this.returnDash = function(){
+    $location.path('/dashboard');
   };
 }

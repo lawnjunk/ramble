@@ -3,25 +3,19 @@
 const angular = require('angular');
 const ramble = angular.module('ramble');
 
+ramble.controller('SignupController', ['$location', 'authService', SignupController]);
 
-ramble.controller('SignupController', ['$log', '$location', 'authService', SignupController]);
-
-function SignupController($log, $location, authService) {
-  $log.debug('init signupCtrl');
+function SignupController($location, authService) {
 
   this.signup = function() {
-    $log.debug('init signupCtrl');
-    console.log("THIS.USER", this.user);
     var data = {
       username: this.user.user,
       password: this.user.password
-    }
+    };
     authService.signup(data)
     .then( token => {
-      $log.info('token', token);
     })
     .catch(err => {
-      $log.error(err);
     });
   };
 }

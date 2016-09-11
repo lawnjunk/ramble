@@ -1,0 +1,51 @@
+@import "_theme";
+
+.entry-list-item {
+  margin: 10px;
+  padding: 10px;
+  border: thin solid $app-text-light;
+  border-radius: 5px;
+
+
+  container {
+    display: flex;
+    overflow: hidden;
+  }
+
+  i {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  h2 {
+    margin: 10px;
+    margin-right: 50px;
+    text-transform: capitalize;
+    font-weight: 200;
+    width: 30%;
+  }
+
+  p {
+    width: 50%;
+    color: $app-light-grey
+  }
+
+  a {
+    text-decoration: none;
+    color: $app-purple;
+
+    &:hover {
+      color: $app-grey;
+    }
+  }
+
+  .fa-trash-o {
+    color: $app_red;
+    width: 10%;
+    text-align: right;
+    &:hover {
+      color: rgba(228, 0, 0, 1);
+    }
+  }
+
+}
