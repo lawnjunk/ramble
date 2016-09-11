@@ -11,10 +11,9 @@ ramble.component('rambleNavBar', {
   controllerAs: 'navCtrl'
 });
 
-ramble.controller('NavController',['$log','$location','$window','authService', NavController]);
+ramble.controller('NavController',['$location','$window','authService', NavController]);
 
-function NavController($log, $location, $window, authService) {
-  $log.debug('init NaveController');
+function NavController($location, $window, authService) {
 
   this.logout = function(){
     authService.logout()

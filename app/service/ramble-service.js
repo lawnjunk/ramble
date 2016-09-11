@@ -3,9 +3,9 @@
 const angular = require('angular');
 const ramble = angular.module('ramble');
 
-ramble.factory('rambleService', ['$log', '$q', '$http', 'authService', rambleService]);
+ramble.factory('rambleService', ['$q', '$http', 'authService', rambleService]);
 
-function rambleService($log, $q, $http, authService) {
+function rambleService($q, $http, authService) {
   let service = {};
 
   service.deleteEntry = function(entryId) {

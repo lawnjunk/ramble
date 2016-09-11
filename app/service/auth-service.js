@@ -3,9 +3,9 @@
 const angular = require('angular');
 const ramble = angular.module('ramble');
 
-ramble.factory('authService', ['$location','$log', '$q', '$window', '$http', authService]);
+ramble.factory('authService', ['$location','$q', '$window', '$http', authService]);
 
-function authService($location, $log, $q, $window, $http) {
+function authService($location, $q, $window, $http) {
   let service = {};
   let token = null;
 
