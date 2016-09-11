@@ -24,4 +24,7 @@ function LrgEntryController($q, $location, $routeParams, rambleService) {
     })
     .catch(err);
   };
+  this.returnHome = function(){
+    $location.path('/dashboard');
+  };
 }
