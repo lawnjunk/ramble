@@ -21,6 +21,7 @@ function EntryListController($location, rambleService){
     rambleService.fetchEntries()
     .then(entries => {
       this.list = entries;
+      this.list.reverse();
     });
   };
 
