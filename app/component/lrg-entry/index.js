@@ -25,4 +25,7 @@ function LrgEntryController($q, $log, $location, $routeParams, rambleService) {
     })
     .catch(err => $log.error(err));
   };
+  this.returnHome = function(){
+    $location.path('/dashboard');
+  };
 }
