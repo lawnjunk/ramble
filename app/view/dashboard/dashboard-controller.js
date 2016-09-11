@@ -3,9 +3,8 @@
 const angular = require('angular');
 const ramble = angular.module('ramble');
 
-ramble.controller('DashboardController', ['$log', '$location', 'authService', DashboardController]);
+ramble.controller('DashboardController', ['$location', 'authService', DashboardController]);
 
-function DashboardController($log, $location, authService) {
-  $log.debug('init dashboardCtrl');
+function DashboardController($location, authService) {
   this.checkToken = authService.checkToken();
 }

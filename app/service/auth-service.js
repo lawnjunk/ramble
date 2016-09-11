@@ -3,9 +3,9 @@
 const angular = require('angular');
 const ramble = angular.module('ramble');
 
-ramble.factory('authService', ['$location','$log', '$q', '$window', '$http', authService]);
+ramble.factory('authService', ['$location','$q', '$window', '$http', authService]);
 
-function authService($location, $log, $q, $window, $http) {
+function authService($location, $q, $window, $http) {
   let service = {};
   let token = null;
 
@@ -49,17 +49,14 @@ function authService($location, $log, $q, $window, $http) {
 
     return $http.post(url, user, config)
     .then(res => {
-      $log.info('success -- ', res.data);
       return _setToken(res.data);
     })
     .catch(err => {
-      $log.info('error -- ', err);
       return $q.reject(err);
     });
   };
 
   service.signin = function(user) {
-    $log.debug(authService.signin);
     let url = `${__API_URL__}/api/signin`;
     let authString = $window.btoa(`${user.username}:${user.password}`);
     let config = {
@@ -71,11 +68,9 @@ function authService($location, $log, $q, $window, $http) {
 
     return $http.get(url, config)
     .then(res => {
-      $log.info('success signed-in', res.data);
       return _setToken(res.data);
     })
     .catch(err => {
-      $log.info('error signing in ', err);
       return $q.reject(err);
     });
   };

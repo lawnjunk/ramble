@@ -12,15 +12,14 @@ ramble.component('rambleEntryList', {
 });
 
 
-ramble.controller('EntryListController', ['$log', '$location', 'rambleService', EntryListController]);
+ramble.controller('EntryListController', ['$location', 'rambleService', EntryListController]);
 
-function EntryListController($log, $location, rambleService){
+function EntryListController($location, rambleService){
   this.list = [];
   this.showAll = false;
   this.getEntries = function() {
     rambleService.fetchEntries()
     .then(entries => {
-      console.log('entries', entries);
       this.list = entries;
     });
   };
