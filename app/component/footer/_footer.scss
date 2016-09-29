@@ -3,18 +3,14 @@
 footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100px;
-  width: 100;
+  justify-content: flex-start;
+  width: 100%;
   background-color: #383838;
-  margin-top: 50px;
 
   p {
     align-self: center;
     outline: 1px dotted white;
     color: white;
-    margin-top: auto;
-    margin-bottom: auto;
     width: 150px;
   }
 
@@ -25,11 +21,42 @@ footer {
 
   .contributors {
     margin: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
   }
+}
+
+
+// iphone 6
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    body {
+      footer {
+        font-size: 1.25em;
+        height: 375px;
+      }
+
+      p {
+        width: auto;
+      }
+    }
+}
+
+//iphone 5
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    body {
+
+    }
+
 }
