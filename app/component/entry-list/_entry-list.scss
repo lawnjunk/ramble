@@ -17,3 +17,45 @@
     border: none;
   }
 }
+
+
+// iphone 6
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    body {
+      .load-btn {
+        font-size: 3em;
+        display: block;
+        width: 100%;
+        height: 100px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+}
+
+//iphone 5
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    body {
+      .load-btn {
+        font-size: 3em;
+        display: block;
+        width: 100%;
+        height: 100px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+}
